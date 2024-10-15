@@ -1,9 +1,16 @@
 <script setup>
+import { useRouter } from 'vue-router'; // Import useRouter from vue-router
 import image1 from '../assets/img1.png';
 import image2 from '../assets/img2.png';
 import image3 from '../assets/img3.png';
 
+const router = useRouter(); // Initialize the router
+
 AOS.init()
+
+function goBack() {
+    router.go(-1); // Navigate back to the previous page
+}
 </script>
 
 <style scoped>
@@ -49,9 +56,44 @@ AOS.init()
     padding: 10px; /* Espaciado interno para el subtítulo */
     font-family: "Instrument Sans", sans-serif;
 }
+
+.year {
+    position: fixed; /* Fix the position */
+    top: 20px; /* Adjust the distance from the top */
+    z-index: 1000; /* Ensure it appears above other elements */
+    font-size: 24px; /* Optional: adjust font size */
+    font-family: "Onest", sans-serif;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.year .line {
+    width: 40px; /* Set the width to 57 pixels */
+    height: 20px; /* Set the height to 27 pixels */
+    background-color: black; /* Set the background color to black */
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.back-button {
+    position: fixed; /* Fix the position */
+    top: 20px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    background-color: black; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: "Onest", sans-serif; /* Font family */
+}
 </style>
 
 <template>
+  <div class="year">
+    <span class="line"></span> 1950
+    {{ edit_1 }} <!-- Added back button -->
+  </div>
   <div class="grid">
     <div class="column-left">
       <div data-aos="fade-right" data-aos-duration="1000">
@@ -59,8 +101,8 @@ AOS.init()
         <p class="subTitle">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
       </div>
     </div>
-    <div class="column-right">
-      <img data-aos="fade-left" data-aos-duration="1000" :src="image1" alt="Descripción de la imagen" style="max-height: 479px;" />
+    <div data-aos="fade-left" data-aos-duration="1000" class="column-right">
+      <img :src="image1" alt="Descripción de la imagen" style="max-height: 479px;" />
     </div>
   </div>
   <div class="grid">
@@ -70,8 +112,8 @@ AOS.init()
         <p class="subTitle">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
       </div>
     </div>
-    <div class="column-right">
-      <img data-aos="fade-left" data-aos-duration="1000" :src="image2" alt="Descripción de la imagen" />
+    <div data-aos="fade-left" data-aos-duration="1000" class="column-right">
+      <img :src="image2" alt="Descripción de la imagen" />
     </div>
   </div>
   <div class="grid">
@@ -81,8 +123,10 @@ AOS.init()
         <p class="subTitle">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
       </div>
     </div>
-    <div class="column-right">
-      <img data-aos="fade-left" data-aos-duration="1000" :src="image3" alt="Descripción de la imagen" />
+    <div data-aos="fade-left" data-aos-duration="1000" class="column-right">
+      <img :src="image3" alt="Descripción de la imagen" />
     </div>
   </div>
+  <!-- Back button implementation -->
+  <button class="back-button" @click="goBack">Volver</button>
 </template>
