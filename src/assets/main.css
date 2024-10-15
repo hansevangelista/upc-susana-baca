@@ -6,3 +6,7 @@ p {
 body {
   font-family: "Instrument Serif", serif;
 }
+
+a {
+  text-decoration: none;
+}

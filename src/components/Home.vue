@@ -9,8 +9,8 @@ const bg3 = '#E7E8EA';
 </script>
 
 <template>
-  
   <div class="grid-container">
+    <RouterLink to="/intro" class="intro-button">Ver Intro</RouterLink>
     <RouterLink to="/interprete" class="grid-item" :style="{ backgroundColor: bg1 }">
       <h2 class="grid-title">La Intreprete</h2>
       <img :src="image1" alt="Imagen 1" class="grid-image" />
@@ -20,11 +20,10 @@ const bg3 = '#E7E8EA';
       <img :src="image2" alt="Imagen 2" class="grid-image" />
     </div>
     <div class="grid-item" :style="{ backgroundColor: bg3 }">
-      <h2 class="grid-title">La Gestora</h2>
+      <h2 class="grid-title" style="color: black;">La Gestora</h2>
       <img :src="image3" alt="Imagen 3" class="grid-image" />
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -58,10 +57,6 @@ const bg3 = '#E7E8EA';
   font-weight: 400; 
 }
 
-.grid-item:nth-child(3) .grid-title {
-  color: black; /* Color negro para el tercer título */
-}
-
 .grid-image {
   width: 100%; /* Ancho completo del contenedor */
   height: auto; /* Mantener la proporción de la imagen */
@@ -71,5 +66,20 @@ const bg3 = '#E7E8EA';
 .grid-item:hover {
   transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
   z-index: 1; /* Asegura que el elemento en zoom esté por encima de los demás */
+}
+
+.intro-button {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 20px; /* Espacio desde la parte superior */
+  right: 20px; /* Espacio desde la derecha */
+  background-color: #E2643C; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cursor tipo pointer */
+  z-index: 10; /* Asegura que el botón esté por encima de otros elementos */
+  text-decoration: none; /* Sin subrayado */
+  text-align: center; /* Centrar texto */
 }
 </style>
