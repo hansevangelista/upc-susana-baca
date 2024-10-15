@@ -20,6 +20,7 @@ AOS.init()
     display: flex; /* Usar flexbox para centrar el contenido */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
+    padding: 10px;
 }
 
 .column-left {
@@ -34,6 +35,7 @@ AOS.init()
     /* height: 479px; Establecer la altura de la imagen a 479 píxeles */
     filter: grayscale(100%); /* Aplicar filtro de escala de grises */
     max-height: 600px;
+    max-width: 100%;
 }
 
 .title {
@@ -41,7 +43,7 @@ AOS.init()
 }
 
 .subTitle {
-    font-size: 30px; /* Establecer el tamaño de la fuente del subtítulo a 40 píxeles */
+    font-size: 24px; /* Establecer el tamaño de la fuente del subtítulo a 40 píxeles */
     background-color: black; /* Fondo negro para el subtítulo */
     color: white; /* Color de texto blanco para el subtítulo */
     padding: 10px; /* Espaciado interno para el subtítulo */
@@ -58,7 +60,7 @@ AOS.init()
       </div>
     </div>
     <div class="column-right">
-      <img data-aos="fade-left" data-aos-duration="1000" :src="image1" alt="Descripción de la imagen" style="height: 479px;" />
+      <img data-aos="fade-left" data-aos-duration="1000" :src="image1" alt="Descripción de la imagen" style="max-height: 479px;" />
     </div>
   </div>
   <div class="grid">
