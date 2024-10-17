@@ -1,6 +1,7 @@
 <script>
-import image from '../assets/img4.png';
 import { useRouter } from 'vue-router'; // Importar useRouter
+import logo from '../assets/logo.png';
+import logo_big from '../assets/logo_big.png';
 
 export default {
   setup() {
@@ -12,6 +13,8 @@ export default {
       currentSection: 0,
       sections: ['Sección 1', 'Sección 2', 'Sección 3'],
       clickCount: 0, // Contador de clics
+      logo,
+      logo_big,
     };
   },
   methods: {
@@ -62,16 +65,22 @@ export default {
       @leave="leave"
     >
       <section v-if="currentSection === 0" class="section-black">
-        <p style="font-size: 60px;">Cargando</p>
+        <div style="text-align: center;">
+          <p style="font-size: 60px;">Cargando</p>
+          <img :src="logo" width="100"/>
+        </div>
       </section>
       <section v-else-if="currentSection === 1">
         <img src="https://s3-alpha-sig.figma.com/img/e0b8/b767/6ab4b5ce5992b9e360b4bcd2882d6d81?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yunu-TiM-X80GpQMvbWLIXJLpeksdk3aWAFiQXj69WIVOWJNRnpDTeru2wPgU~R6eqhsnAP-0m2-pI5~WelLiZXwAk8LdqO6-f~Poml3Za3LtjSO9XUmBgf4wdhKAavxILBZUR5XEsEJLk9mhyktkse8B82qEKFHReOxKxhzRhHiQOiyGXyKdivqSx4-CBia1NA6A2lk7qwhfGBtUv0JvQVUtjtrG4FJG9IkmONS5MGu6tKNan97fMfp2nFdzbC8hlRDD8N0921R-MA-lrTV01lLHqom~cOs0HrNJ6JeLflk4ZG3cp42qntrb-TgWdn-hZuFtpxn4559h-3nvUYdwA__" alt="Descripción de la imagen" />
       </section>
       <section v-else-if="currentSection === 2" class="section-black">
-        <p style="font-size: 60px; text-align: center;">
-          SUSANA BACA <br>  
-          Trinidad Artística
-        </p>
+        <div style="text-align: center;">
+          <img :src="logo_big" width="180"/>
+          <p style="font-size: 60px; text-align: center;">
+            SUSANA BACA <br>
+            Trinidad Artística
+          </p>
+        </div>
       </section>
     </transition>
     <button v-bind:style="{ display: 'none' }" @click="nextSection">Siguiente</button> <!-- Hacer el botón invisible -->
