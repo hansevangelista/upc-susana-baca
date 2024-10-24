@@ -9,19 +9,22 @@ const bg3 = '#E7E8EA';
 </script>
 
 <template>
-  <div class="grid-container">
-    <RouterLink to="/intro" class="intro-button">Ver Intro</RouterLink>
-    <RouterLink to="/interprete" class="grid-item" :style="{ backgroundColor: bg1 }">
-      <h2 class="grid-title">La Intreprete</h2>
-      <img :src="image1" alt="Imagen 1" class="grid-image" />
-    </RouterLink>
-    <div class="grid-item" :style="{ backgroundColor: bg2 }">
-      <h2 class="grid-title">La Investigadora</h2>
-      <img :src="image2" alt="Imagen 2" class="grid-image" />
-    </div>
-    <div class="grid-item" :style="{ backgroundColor: bg3 }">
-      <h2 class="grid-title" style="color: black;">La Gestora</h2>
-      <img :src="image3" alt="Imagen 3" class="grid-image" />
+  <div style="height: 100vh; display: flex; flex-direction: column;">
+    <div style="height: 61px;"></div>
+    <div class="grid-container" style="flex: 1;">
+      <RouterLink to="/intro" class="intro-button">Ver Intro</RouterLink>
+      <RouterLink to="/interprete" class="grid-item" :style="{ backgroundColor: bg1 }">
+        <h2 class="grid-title">La Intreprete</h2>
+        <img :src="image1" alt="Imagen 1" class="grid-image" />
+      </RouterLink>
+      <RouterLink to="/investigadora" class="grid-item" :style="{ backgroundColor: bg2 }">
+        <h2 class="grid-title">La Investigadora</h2>
+        <img :src="image2" alt="Imagen 2" class="grid-image" />
+      </RouterLink>
+      <div class="grid-item" :style="{ backgroundColor: bg3 }">
+        <h2 class="grid-title" style="color: black;">La Gestora</h2>
+        <img :src="image3" alt="Imagen 3" class="grid-image" />
+      </div>
     </div>
   </div>
 </template>
@@ -31,8 +34,9 @@ const bg3 = '#E7E8EA';
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0; /* Se eliminó el espacio entre columnas */
-  height: 100vh; /* Altura del grid al 100% de la ventana */
+  /* height: 100vh; Altura del grid al 100% de la ventana */
   overflow: hidden; /* Asegúrate de que el contenedor no se desborde */
+  position: relative;
 }
 
 .grid-item {

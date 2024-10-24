@@ -1,8 +1,5 @@
 <script setup>
 import { useRouter } from 'vue-router'; // Import useRouter from vue-router
-import image1 from '../assets/img1.png';
-import image2 from '../assets/img2.png';
-import image3 from '../assets/img3.png';
 
 import img_11 from '../assets/sec1/11.png';
 
@@ -10,8 +7,12 @@ import img_21 from '../assets/sec1/21.png';
 import img_22 from '../assets/sec1/22.png';
 import img_23 from '../assets/sec1/23.png';
 
+import img_31 from '../assets/sec1/31.png';
+
 import img_41 from '../assets/sec1/41.png';
 import img_42 from '../assets/sec1/42.png';
+
+import img_51 from '../assets/sec1/51.png';
 
 import img_61 from '../assets/sec1/61.png';
 import img_62 from '../assets/sec1/62.png';
@@ -41,7 +42,7 @@ function goBack() {
 }
 
 .column-right {
-    background-color: black; /* Fondo negro para la columna derecha */
+    background-color: #111; /* Fondo negro para la columna derecha */
     color: white; /* Color de texto blanco para mejor contraste */
     display: flex; /* Usar flexbox para centrar el contenido */
     justify-content: center; /* Centrar horizontalmente */
@@ -83,9 +84,9 @@ function goBack() {
 
 .year {
     position: fixed; /* Fix the position */
-    top: 20px; /* Adjust the distance from the top */
+    top: 81px; /* Adjust the distance from the top */
     z-index: 1000; /* Ensure it appears above other elements */
-    font-size: 24px; /* Optional: adjust font size */
+    font-size: 20px; /* Optional: adjust font size */
     font-family: "Onest", sans-serif;
     background: white;
     display: flex;
@@ -94,15 +95,15 @@ function goBack() {
 
 .year .line {
     width: 40px; /* Set the width to 57 pixels */
-    height: 20px; /* Set the height to 27 pixels */
-    background-color: black; /* Set the background color to black */
+    height: 18px; /* Set the height to 27 pixels */
+    background-color: #111; /* Set the background color to black */
     display: inline-block;
     margin-right: 8px;
 }
 
 .back-button {
     position: fixed; /* Fix the position */
-    top: 20px; /* Adjust the distance from the top */
+    top: 81px; /* Adjust the distance from the top */
     right: 20px; /* Adjust the distance from the right */
     background-color: white; /* Background color */
     color: black; /* Text color */
@@ -115,10 +116,14 @@ function goBack() {
 
 <template>
 
+  <button class="back-button" @click="goBack">Volver</button>
+
   <div class="year">
     <span class="line"></span> La Intérprete
     {{ edit_1 }} <!-- Added back button -->
   </div>
+  
+  <div style="height: 61px;"></div>
 
   <div class="grid">
     <div class="column-left">
@@ -193,7 +198,7 @@ function goBack() {
       </div>
     </div>
     <div data-aos="fade-left" data-aos-duration="1000" class="column-right">
-
+      <img :src="img_31" style="max-height: 479px;"/>
     </div>
   </div>
 
@@ -264,7 +269,7 @@ function goBack() {
       </div>
     </div>
     <div data-aos="fade-left" data-aos-duration="1000" class="column-right">
-
+      <img :src="img_51" style="max-height: 479px;"/>
     </div>
   </div>
 
@@ -383,44 +388,4 @@ function goBack() {
     </div>
   </div>
 
- <!-- 
-
-  <div class="grid">
-    <div class="column-left">
-      <div data-aos="fade-right" data-aos-duration="1000">
-        <p class="title">Inicios en la música</p> <br>
-        <p class="subTitle">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
-      </div>
-    </div>
-    <div data-aos="fade-left" data-aos-duration="1000" class="column-right">
-      <img :src="image1" alt="Descripción de la imagen" style="max-height: 479px;" />
-    </div>
-  </div>
-  <div class="grid">
-    <div class="column-left">
-      <div data-aos="fade-right" data-aos-duration="1000">
-        <p class="title">Inicios en la música</p> <br>
-        <p class="subTitle">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
-      </div>
-    </div>
-    <div data-aos="fade-left" data-aos-duration="1000" class="column-right">
-      <img :src="image2" alt="Descripción de la imagen" />
-    </div>
-  </div>
-  <div class="grid">
-    <div class="column-left">
-      <div data-aos="fade-right" data-aos-duration="1000">
-        <p class="title">Inicios en la música</p> <br>
-        <p class="subTitle">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</p>
-      </div>
-    </div>
-    <div data-aos="fade-left" data-aos-duration="1000" class="column-right">
-      <img :src="image3" alt="Descripción de la imagen" />
-    </div>
-  </div>
-
-  -->
-  
-  <!-- Back button implementation -->
-  <button class="back-button" @click="goBack">Volver</button>
 </template>
