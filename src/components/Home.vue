@@ -21,10 +21,10 @@ const bg3 = '#E7E8EA';
         <h2 class="grid-title">La Investigadora</h2>
         <img :src="image2" alt="Imagen 2" class="grid-image" />
       </RouterLink>
-      <div class="grid-item" :style="{ backgroundColor: bg3 }">
+      <RouterLink to="/gestora" class="grid-item" :style="{ backgroundColor: bg3 }">
         <h2 class="grid-title" style="color: black;">La Gestora</h2>
         <img :src="image3" alt="Imagen 3" class="grid-image" />
-      </div>
+      </RouterLink>
     </div>
   </div>
 </template>
