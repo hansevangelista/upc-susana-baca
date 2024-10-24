@@ -10,7 +10,7 @@ const bg3 = '#E7E8EA';
 
 <template>
   <div style="height: 100vh; display: flex; flex-direction: column;">
-    <div style="height: 61px;"></div>
+    <div style="min-height: 61px;"></div>
     <div class="grid-container" style="flex: 1;">
       <RouterLink to="/intro" class="intro-button">Ver Intro</RouterLink>
       <RouterLink to="/interprete" class="grid-item" :style="{ backgroundColor: bg1 }">
