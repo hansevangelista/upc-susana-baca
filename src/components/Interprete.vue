@@ -35,10 +35,17 @@ function goBack() {
 
 <style scoped>
 .grid {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: repeat(2, 1fr);
     /* gap: 16px; */ /* Se ha eliminado el espacio entre columnas */
     min-height: 100vh; /* Establece la altura del grid al 100% de la ventana */
+    overflow: hidden
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    display: grid;
+  }
 }
 
 .column-right {
