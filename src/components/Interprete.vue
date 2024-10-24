@@ -395,4 +395,11 @@ function goBack() {
     </div>
   </div>
 
+  <audio autoplay loop>
+    <source src="../assets/sec1/music.mp3" type="audio/mpeg"> <!-- Added background audio -->
+    Your browser does not support the audio element.
+  </audio>
+
 </template>
+
+
