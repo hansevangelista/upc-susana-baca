@@ -1,6 +1,6 @@
 <script setup>
-import image1 from '../assets/image1.png';
-import image2 from '../assets/image2.png';
+import image1 from '../assets/image1.webp';
+import image2 from '../assets/image2.webp';
 import image3 from '../assets/image3.png';
 
 const bg1 = '#000000';
