@@ -1,5 +1,6 @@
 <script>
 import { useRouter } from 'vue-router'; // Importar useRouter
+import back from '../assets/back.webp';
 import logo from '../assets/logo.png';
 import logo_big from '../assets/logo_big.png';
 
@@ -13,6 +14,7 @@ export default {
       currentSection: 0,
       sections: ['Sección 1', 'Sección 2', 'Sección 3'],
       clickCount: 0, // Contador de clics
+      back,
       logo,
       logo_big,
     };
@@ -71,7 +73,7 @@ export default {
         </div>
       </section>
       <section v-else-if="currentSection === 1">
-        <img src="https://s3-alpha-sig.figma.com/img/e0b8/b767/6ab4b5ce5992b9e360b4bcd2882d6d81?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yunu-TiM-X80GpQMvbWLIXJLpeksdk3aWAFiQXj69WIVOWJNRnpDTeru2wPgU~R6eqhsnAP-0m2-pI5~WelLiZXwAk8LdqO6-f~Poml3Za3LtjSO9XUmBgf4wdhKAavxILBZUR5XEsEJLk9mhyktkse8B82qEKFHReOxKxhzRhHiQOiyGXyKdivqSx4-CBia1NA6A2lk7qwhfGBtUv0JvQVUtjtrG4FJG9IkmONS5MGu6tKNan97fMfp2nFdzbC8hlRDD8N0921R-MA-lrTV01lLHqom~cOs0HrNJ6JeLflk4ZG3cp42qntrb-TgWdn-hZuFtpxn4559h-3nvUYdwA__" alt="Descripción de la imagen" />
+        <img :src="back" alt="Descripción de la imagen" />
       </section>
       <section v-else-if="currentSection === 2" class="section-black">
         <div style="text-align: center;">
