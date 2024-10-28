@@ -65,6 +65,7 @@ function goBack() {
     /* filter: grayscale(100%);  Aplicar filtro de escala de grises */
     max-height: 600px;
     max-width: 100%;
+    padding: 4px;
 }
 
 .title {
@@ -121,11 +122,17 @@ function goBack() {
   <button class="back-button" @click="goBack">Volver</button>
 
   <div class="year">
-    <span class="line"></span> Investigadora
+    <span class="line"></span> La Investigadora
     {{ edit_1 }} <!-- Added back button -->
   </div>
   
   <div style="height: 61px;"></div>
+
+  <br/>
+  <br/>
+  <br/>
+
+  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1021765672?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="El ritmo de la curiosidad"></iframe></div>
 
   <div class="grid">
     <div class="column-left">
@@ -462,7 +469,7 @@ function goBack() {
     </div>
   </div>
 
-  <audio autoplay loop>
+  <audio autoplay loop volume=0.2>
     <source src="../assets/sec2/music.mp3" type="audio/mpeg"> <!-- Added background audio -->
     Your browser does not support the audio element.
   </audio>
