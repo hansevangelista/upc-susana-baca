@@ -3,8 +3,11 @@ import { useRouter } from 'vue-router'; // Importar useRouter
 import back from '../assets/back.webp';
 import logo from '../assets/logo.png';
 import logo_big from '../assets/logo_big.png';
+import Main from '../layouts/Layout.vue';
 
 export default {
+  components: { Main },
+
   setup() {
     const router = useRouter(); // Inicializar el router
     return { router };
@@ -59,6 +62,8 @@ export default {
 </script>
 
 <template>
+  <Main>
+
   <div>
     <transition 
       name="fade" 
@@ -87,6 +92,8 @@ export default {
     </transition>
     <button v-bind:style="{ display: 'none' }" @click="nextSection">Siguiente</button> <!-- Hacer el botón invisible -->
   </div>
+
+  </Main>
 </template>
 
 <style>

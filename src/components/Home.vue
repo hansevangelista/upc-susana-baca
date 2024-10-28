@@ -3,12 +3,16 @@ import image1 from '../assets/image1.webp';
 import image2 from '../assets/image2.webp';
 import image3 from '../assets/image3.png';
 
+import Main from '../layouts/Layout.vue';
+
 const bg1 = '#000000';
 const bg2 = '#E2643C';
 const bg3 = '#E7E8EA';
 </script>
 
 <template>
+  <Main>
+
   <div style="height: 100vh; display: flex; flex-direction: column;">
     <div style="min-height: 61px;"></div>
     <div class="grid-container" style="flex: 1;">
@@ -27,6 +31,8 @@ const bg3 = '#E7E8EA';
       </RouterLink>
     </div>
   </div>
+
+  </Main>
 </template>
 
 <style scoped>
