@@ -1,9 +1,13 @@
 <script setup>
+import Main from '../layouts/Layout.vue';
+
 import image1 from '../assets/image1.webp';
 import image2 from '../assets/image2.webp';
 import image3 from '../assets/image3.png';
 
-import Main from '../layouts/Layout.vue';
+import icon1 from '../assets/icon1.png';
+import icon2 from '../assets/icon2.png';
+import icon3 from '../assets/icon3.png';
 
 const bg1 = '#000000';
 const bg2 = '#E2643C';
@@ -19,14 +23,29 @@ const bg3 = '#E7E8EA';
       <RouterLink to="/intro" class="intro-button">Ver Intro</RouterLink>
       <RouterLink to="/interprete" class="grid-item" :style="{ backgroundColor: bg1 }">
         <h2 class="grid-title">La Intreprete</h2>
+        <br>  
+        <img :src="icon1" style="
+          height: 40px;
+          display: table;
+          margin: auto;">
         <img :src="image1" alt="Imagen 1" class="grid-image" />
       </RouterLink>
       <RouterLink to="/investigadora" class="grid-item" :style="{ backgroundColor: bg2 }">
         <h2 class="grid-title">La Investigadora</h2>
+        <br>  
+        <img :src="icon2" style="
+          height: 40px;
+          display: table;
+          margin: auto;">
         <img :src="image2" alt="Imagen 2" class="grid-image" />
       </RouterLink>
       <RouterLink to="/gestora" class="grid-item" :style="{ backgroundColor: bg3 }">
         <h2 class="grid-title" style="color: black;">La Gestora</h2>
+        <br>  
+        <img :src="icon3" style="
+          height: 40px;
+          display: table;
+          margin: auto;">
         <img :src="image3" alt="Imagen 3" class="grid-image" />
       </RouterLink>
     </div>
