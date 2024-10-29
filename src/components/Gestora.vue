@@ -24,7 +24,7 @@ const router = useRouter(); // Initialize the router
 AOS.init()
 
 function goBack() {
-    router.go(-1); // Navigate back to the previous page
+    router.push('/'); // Navigate back to the previous page
 }
 </script>
 

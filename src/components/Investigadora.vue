@@ -24,7 +24,10 @@ const router = useRouter(); // Initialize the router
 AOS.init()
 
 function goBack() {
-    router.go(-1); // Navigate back to the previous page
+    router.push('/'); // Navigate back to the previous page
+}
+function goNext() {
+    router.push('/gestora'); // Navigate back to the previous page
 }
 </script>
 
@@ -115,11 +118,24 @@ function goBack() {
     cursor: pointer; /* Pointer cursor on hover */
     font-family: "Onest", sans-serif; /* Font family */
 }
+
+.next-button {
+    position: fixed; /* Fix the position */
+    bottom: 81px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    background-color: white; /* Background color */
+    color: black; /* Text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: "Onest", sans-serif; /* Font family */
+}
 </style>
 
 <template>
 
   <button class="back-button" @click="goBack">Volver</button>
+  <button class="next-button" @click="goNext">Siguiente</button>
 
   <div class="year">
     <span class="line"></span> La Investigadora
