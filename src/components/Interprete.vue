@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'; // Import useRouter from vue-router
+import { onMounted } from 'vue'; // Import onMounted from Vue
 
 import img_11 from '../assets/sec1/11.png';
 
@@ -25,6 +26,10 @@ import img_82 from '../assets/sec1/82.png';
 import img_83 from '../assets/sec1/83.png';
 
 const router = useRouter(); // Initialize the router
+
+onMounted(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on load
+});
 
 AOS.init()
 
