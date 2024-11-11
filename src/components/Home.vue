@@ -22,7 +22,7 @@ const bg3 = '#E7E8EA';
     <div class="grid-container" style="flex: 1;">
       <RouterLink to="/intro" class="intro-button">Ver Intro</RouterLink>
       <RouterLink to="/interprete" class="grid-item" :style="{ backgroundColor: bg1 }">
-        <h2 class="grid-title">La Intreprete</h2>
+        <h2 class="grid-title">La Interprete</h2>
         <br>  
         <img :src="icon1" style="
           height: 40px;
